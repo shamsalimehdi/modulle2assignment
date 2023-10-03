@@ -1,0 +1,54 @@
+/* Reset some default browser styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set the overall font-family and font size */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* Header styling */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Section styling */
+.section {
+    border: 1px solid #000;
+    margin: 10px 5px; /* Reduce margin to create space for three boxes in one row */
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    background-color: #ccc; /* Add gray background color to the boxes */
+}
+
+/* Section title styling */
+.section-title {
+    background-color: #ff6600; /* You can choose your color */
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 10px;
+}
+
+/* Responsive layout */
+@media screen and (min-width: 768px) {
+    .section {
+        width: calc(33.33% - 10px); /* Equal width for all 3 sections with margin accounted for */
+        float: left;
+        margin-right: 10px; /* Add margin to separate the boxes */
+    }
+
+    /* Clear every 3rd section to start a new row */
+    .section:nth-child(3n+1) {
+        clear: left;
+        margin-right: 0; /* Remove margin for the first box in each row */
+    }
+}
